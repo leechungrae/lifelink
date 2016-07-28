@@ -3,8 +3,8 @@ class HomeController < ApplicationController
   end
   def about
   end
-  def pricing
+  def user
   end
-  def tour
+  def company
   end
 end
