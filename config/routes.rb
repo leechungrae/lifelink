@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
   root 'home#index'
+  get '/tour' => 'home#tour'
+  get '/about' => 'home#about'
+  get '/pricing' => 'home#pricing'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
