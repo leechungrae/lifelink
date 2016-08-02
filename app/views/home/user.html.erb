@@ -103,8 +103,7 @@
 		</section>
 		<!-- #fh5co-header -->
 
-		<section id="fh5co-hero" class="no-js-fullheight" style="background-image: url(images/full_image_2.jpg);" data-next="yes">
-			<div class="fh5co-overlay"></div>
+		<section id="fh5co-hero" style="background-image: url(images/full_image_2.jpg);">
 			<div class="container">
 				<div class="fh5co-intro no-js-fullheight">
 					<div class="fh5co-intro-text">
@@ -131,20 +130,37 @@
 		<!-- END #fh5co-hero -->
 
 		<section id="fh5co-subscribe">
+
 			<div class="container">
 				<br>
 				<br>
-				<h3 class="animate-box"><label for="email">Subscribe to our newsletter</label></h3>
-				<form action="#" method="post" class="animate-box">
-					<i class="fh5co-icon icon-paper-plane"></i>
-					<input type="email" class="form-control" placeholder="Enter your email" id="email" name="email">
-					<input type="submit" value="Send" class="btn btn-primary">
-				</form>
+				<h3 class="animate-box">버킷리스트를 작성하세요</h3>
 
+				<form action="/home/write" method="post" class="animate-box">
+				    <div id="form-wrap">
+				      <input type="text" name="bucket" placeholder="Enter your bucketlist" class="form-control" />
+				      <input type="submit" name="submit" id="submit" class="btn btn-primary" value="Submit" />
+				  	</div>
+			  	</form>
 			</div>
 		</section>
 		<!-- END #fh5co-subscribe -->
+
+
+		<section id="fh5co-subscribe">
+			<div class="container">
+				<% @posts.each do |p| %>
+				<i class="icon-check2"></i>
+				<%= p.bucket %>
+				<a href="">[수 정]</a>
+				<a href="">[삭 제]</a>
+				<hr>
+				<% end %>
+			</div>
+		</section>
+
 	</div>
+
 	<!-- END #fh5co-page -->
 	
 	<!-- For demo purposes Only ( You may delete this anytime :-) -->

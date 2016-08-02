@@ -133,6 +133,21 @@
 		<!-- END #fh5co-hero -->
 	</div>
 	<!-- END #fh5co-page -->
+	<div>
+		<section id="fh5co-subscribe">
+			<div class="container">
+				<% @posts.each do |p| %>
+				<i class="icon-check2"></i>
+				<%= p.bucket %>
+				<a href="">[배 팅]</a>
+				<hr>
+				<% end %>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- END #fh5co-page -->
 	
 	<!-- For demo purposes Only ( You may delete this anytime :-) -->
 	<div id="colour-variations">

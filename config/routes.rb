@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   root 'home#index'
   get '/user' => 'home#user'
+  post 'home/write'
   get '/about' => 'home#about'
   get '/company' => 'home#company'
 
