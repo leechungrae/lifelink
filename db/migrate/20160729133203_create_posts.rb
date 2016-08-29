@@ -3,6 +3,7 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
 
     	t.string :bucket
+    	t.references :user
 
       t.timestamps null: false
     end

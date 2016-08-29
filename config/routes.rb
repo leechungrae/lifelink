@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/user' => 'home#user'
   post 'home/write'
+  get 'destroy/:post_id' => "home#destroy"
+  get 'update_view/:post_id' => "home#update_view"
+  post 'siljae_update/:post_id' => "home#siljae_update"
+  
   get '/about' => 'home#about'
   get '/company' => 'home#company'
 
